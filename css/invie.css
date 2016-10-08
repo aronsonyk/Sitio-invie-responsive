@@ -24,7 +24,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-
 .icon-envelope:before {
     content: "\e900";
 }
@@ -38,6 +37,25 @@
     content: "\e903";
 }
 
+
+
+/** {
+  width: tamaño;
+  height: tamaño;
+  padding: 10px;
+  padding-top: 10px;
+  padding-right: 13px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding: 10px 13px 5px 15px;
+  margin: 10px;
+  margin-top: 10px;
+  margin-right: 13px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  margin: 10px 13px 5px 15px;
+  border: 2px solid red;
+}*/
 
 body {
   font-family: 'Allerta', sans-serif;
@@ -83,6 +101,7 @@ input:focus, textarea:focus {
 }
 
 .background {
+  background-color: #466173;
   background-image: url('../images/background.png');
   background-size: cover;
 }
@@ -286,6 +305,7 @@ input:focus, textarea:focus {
   margin-bottom: 10px;
 }
 
+
 .sexo {
   margin-top: 10px;
 }
@@ -295,7 +315,8 @@ input:focus, textarea:focus {
   margin: 50px 0;
 }
 
-.burguer-button{
+
+.burguer-button {
   width: 40px;
   border-radius: 50%;
   line-height: 40px;
@@ -304,127 +325,185 @@ input:focus, textarea:focus {
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   left: 20px;
-  top:20px; 
+  top: 20px;
+  color: white;
   z-index: 3;
+  display: none;
 }
 
-/*Media Queri Interno*/
+.video-demo {
+  max-width: 500px;
+  width: 100%;
+  border: 5px solid #3c5b6e;
+}
+
+.video-demo-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
 @media screen and (max-width: 800px) {
- /* .contendor{
+  /*body {
+    border: 10px solid red;
+  }*/
+  /*.contenedor {
     width: auto;
     max-width: 800px;
   }*/
 
-  .titulo{
+  /* precios */
+  .tabla {
+    margin: 50px 20px;
+  }
+  .tabla .contenedor {
+    overflow: auto;
+    border: 1px solid #273b47;
+  }
+  /* precios */
+  /* portada */
+  .titulo {
     font-size: 45px;
     margin-top: 30px;
   }
-  .title a {
-    font-size:18px;
+  .title-a {
+    font-size: 18px;
   }
-  .portada{
+  .portada {
     height: auto;
   }
-  .portada .button{
+  .portada .button {
     margin-bottom: 30px;
     display: inline-block;
   }
-/*guitarras*/
+  /* portada */
 
-  .guitarras {
-    text-align: center;
+
+  /* guitarras */
+  .video-demo-contenedor {
+    margin-bottom: 30px;
   }
-/*guitarras*/
-  .izquierda,.derecha {
+  .guitarras {
+    text-align:center;
+  }
+  .izquierda, .derecha {
     float: none;
     position: static;
   }
-  .title-b{
+  .title-b {
     margin: 0;
   }
-  .guitarra li{
-    list-style:none;
+  .guitarra li {
+    list-style: none;
   }
-  .guitarra.b{
+  .guitarra.b {
     height: auto;
   }
-   .contenedor-guitarra-a{
-    position:static;
+  .contenedor-guitarra-b {
+    position: static;
     margin: 0;
-
   }
-  .contenedor-guitarra-b{
-    position:static;
-    margin: 0;
-
+  .contenedor-guitarra-a {
+    padding: 0;
   }
+  /* guitarras */
+
 }
-@media screen and (max-width: 767px){
-  /*footer*/
-  .footer .contenedor{
+
+@media screen and (max-width: 767px) {
+  /* footer */
+  .footer .contenedor {
     display: block;
   }
+
   .contacto {
     margin: 0 auto;
   }
-  .formulario{
+  .formulario {
     display: block;
-    margin: auto;
+    margin: 0 auto;
     width: 300px;
   }
-  .intereses label{
+
+  .intereses label {
     display: block;
     font-size: 16px;
-    }
-  .col1{
-      margin: 0;
-    }
-  input[type="text"],input[type="email"]{
-    font-size: 16px;
-    padding:5px;
   }
-  textarea{
-    width: 100%;
-  }
-  input[type="radio"],input[type="checkbox"]{
-    zoom: 1.5;
-
-    }
-}
-
-@media screen and (max-width: 650px){
-  .header{
-      text-align: center;
-  }
-  .logotipo{
+  .col1 {
     margin: 0;
   }
-  .menu{
-    position: static;
-    display: block;
-  
+  input[type="text"],
+  input[type="email"] {
+    font-size: 16px;
+    padding: 5px;
   }
-  .menu li:first-child {
-    margin:0 ;
-
+  textarea {
+    width: 100%;
   }
-  .menu ul {
-  padding: 0;
+  input[type="radio"],
+  input[type="checkbox"] {
+    zoom: 1.5;
   }
-  
+  /* footer */
 }
 
-@media screen and (max-width: 500px){
-/*  Portada*/
-  .portada .contenedor{
+@media screen and (max-width: 650px) {
+
+  .header {
+    text-align: center;
+  }
+
+  .logotipo {
+    margin: 0;
+  }
+
+  .menu {
     position: static;
-    
+    display: block;
+  }
+
+  .menu li:first-child {
+    margin: 0;
+  }
+
+  .menu ul {
+    padding: 0;
+  }
+
+  /* guitarras */
+  /*.video-demo {
+    margin: 0 10px;
+  }*/
+  /* guitarras */
+
+}
+
+
+@media screen and (max-width: 500px) {
+  /* portada */
+  .portada .button {
+    display: block;
+  }
+  .precios .header .logotipo {
+    margin: 50px 0;
+  }
+  .burguer-button {
+    display: block;
+  }
+  .portada .contenedor {
+    position: static;
+  }
+  .header {
+    position: static;
+  }
+  .header .contenedor {
+    position: static;
   }
   .menu {
     background: rgba(255, 60, 88, .8);
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: 0;
     z-index: 2;
@@ -435,47 +514,65 @@ input:focus, textarea:focus {
     align-items: center;
     transition: .3s;
   }
-    .menu.active{
-      left: 0%;
-    }
+  .menu.active {
+    left: 0;
+  }
 
-    .menu ul{
-      flex: 1;
-    }
-  .menu li{
+  .menu ul {
+    flex: 1;
+  }
+  .menu li {
     display: block;
     margin: 0;
     padding: 8px 0;
-    border-bottom:1px solid white;
+    border-bottom: 1px solid white;
   }
-  .menu li:before{
+
+  .menu li:before {
     display: none;
   }
-  .menu li:first-child{
+
+  .menu li:first-child {
     border-top: 1px solid white;
   }
-  .portada{
+  .portada {
     text-align: center;
   }
-  .titulo{
+  .titulo {
     font-size: 30px;
   }
-  .title{
-    font-size: 16px;
+
+  .title {
+    font-size: 16px
   }
-  /*GUITARRAS*/
-  .guitarra img{
+  /* portada */
+
+  /* guitarras */
+  .guitarra img {
     width: 200px;
-    height: auto;
+    /*height: auto;*/
   }
-  .title-b{
+  .title-b {
     font-size: 30px;
   }
+  .video-demo-contenedor {
+    margin: 0 10px 30px 10px;
+  }
+  /* guitarras */
+
+  /* footer */
+  .col2 {
+    align-items: stretch;
+  }
+  /* footer */
+
 }
 
-video-demo{
-width: 100%;
+
+video {
+  width: 100%;
 }
+
 
 .video-responsive-contenedor {
   position: relative;
@@ -488,16 +585,13 @@ width: 100%;
   right: 0;
   top: 0;
   bottom: 0;
-  width: 0;
+  width: 100%;
   height: 100%;
 }
 
 
-
-
-
-
-
-
-
-
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .background {
+    background-image: url('../images/background2x.png');
+  }
+}
